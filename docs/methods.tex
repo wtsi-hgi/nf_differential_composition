@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % for different characters in author names of cited articles
+
+\usepackage[sort,numbers,authoryear]{natbib}
+
+% maths stuff
+\usepackage{amsmath}
+\usepackage{mleftright}
+\newcommand{\lnb}[1]{%
+  \ln\mleft(#1\mright)%
+}
+\DeclareMathOperator{\Var}{Var}
+
+
+\begin{document}
+
+\title{Example module 1}
+\author{Forename Surname}
+
+\maketitle
+
+\section{My analysis 1a}
+
+Text describing part a of my analysis 1, as in a paper, citing the relevant methods \citep{article_1,article_2}. 
+
+\section{My analysis 1b}
+
+Text describing part a of my analysis 1, as in a paper, citing the relevant methods \citep{article_3}. 
+
+\section{Note for the future}
+
+Any additional notes!
+
+\bibliographystyle{apalike}
+\bibliography{methods-references}
+
+\end{document}

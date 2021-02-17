@@ -1,0 +1,20 @@
+experiment_key_column:
+    description: 'Column used to group samples to make pseudobulk.'
+    value: 'experiment_id'
+anndata_cell_label:
+    description: 'Anndata cell label column in obs slot.'
+    value: 'cluster'
+differential_composition:
+    run_process: false
+    models:
+        description: 'List of differential conditions (e.g., disease status).
+            Currently covariates are not allowed. Levels used to cast variables
+            to make a reference (first entry). Example:
+            smoking_status::no,yes,ex-smoker;;sex::F,M'
+        value:
+            - variable: 'sex'
+              levels: 'sex::M,F'
+            - variable: 'age'
+              levels: ''
+            - variable: 'n_genes_by_counts'
+              levels: ''
